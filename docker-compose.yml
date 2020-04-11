@@ -37,7 +37,7 @@ services:
       - ./sql/:/docker-entrypoint-initdb.d/
       - sqldata:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD : lollol
+      MYSQL_ROOT_PASSWORD : ${MYSQL_ROOT_PASSWORD}
       MYSQL_USER : ocsuser
       MYSQL_PASSWORD : ocspass
       MYSQL_DATABASE : ocsweb
