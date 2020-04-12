@@ -35,7 +35,7 @@ services:
       - 3306:3306
     volumes :
       - ./sql/:/docker-entrypoint-initdb.d/
-      - sqldata:/var/lib/mysql
+      - ./sqldata:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD : ${MYSQL_ROOT_PASSWORD}
       MYSQL_USER : ocsuser
